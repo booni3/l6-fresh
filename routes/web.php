@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/tenant-test', function(){
+    dump(\Tenancy\Facades\Tenancy::getTenantConnection()->getConfig());
+    dd(\App\Post::first());
+});
+

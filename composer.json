@@ -12,7 +12,12 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
-        "laravel/vapor-core": "^2.0"
+        "laravel/vapor-core": "^2.0",
+        "tenancy/db-driver-mysql": "dev-master",
+        "tenancy/framework": "dev-master",
+        "tenancy/hooks-database": "dev-master",
+        "tenancy/hooks-migration": "dev-master",
+        "tenancy/identification-driver-http": "dev-master"
     },
     "require-dev": {
         "facade/ignition": "^1.4",

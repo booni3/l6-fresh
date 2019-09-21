@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f9d52c4d5782587c3d237148a9dd2b2",
+    "content-hash": "aa57e5e20f6b7a8b86a2a35b03cddcf9",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -121,6 +121,237 @@
             ],
             "description": "implementation of xdg base directory specification for php",
             "time": "2014-10-24T07:27:01+00:00"
+        },
+        {
+            "name": "doctrine/cache",
+            "version": "v1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/cache.git",
+                "reference": "d768d58baee9a4862ca783840eca1b9add7a7f57"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/d768d58baee9a4862ca783840eca1b9add7a7f57",
+                "reference": "d768d58baee9a4862ca783840eca1b9add7a7f57",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~7.1"
+            },
+            "conflict": {
+                "doctrine/common": ">2.2,<2.4"
+            },
+            "require-dev": {
+                "alcaeus/mongo-php-adapter": "^1.1",
+                "doctrine/coding-standard": "^4.0",
+                "mongodb/mongodb": "^1.1",
+                "phpunit/phpunit": "^7.0",
+                "predis/predis": "~1.0"
+            },
+            "suggest": {
+                "alcaeus/mongo-php-adapter": "Required to use legacy MongoDB driver"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Caching library offering an object-oriented API for many cache backends",
+            "homepage": "https://www.doctrine-project.org",
+            "keywords": [
+                "cache",
+                "caching"
+            ],
+            "time": "2018-08-21T18:01:43+00:00"
+        },
+        {
+            "name": "doctrine/dbal",
+            "version": "v2.9.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/dbal.git",
+                "reference": "22800bd651c1d8d2a9719e2a3dc46d5108ebfcc9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/22800bd651c1d8d2a9719e2a3dc46d5108ebfcc9",
+                "reference": "22800bd651c1d8d2a9719e2a3dc46d5108ebfcc9",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/cache": "^1.0",
+                "doctrine/event-manager": "^1.0",
+                "ext-pdo": "*",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^5.0",
+                "jetbrains/phpstorm-stubs": "^2018.1.2",
+                "phpstan/phpstan": "^0.10.1",
+                "phpunit/phpunit": "^7.4",
+                "symfony/console": "^2.0.5|^3.0|^4.0",
+                "symfony/phpunit-bridge": "^3.4.5|^4.0.5"
+            },
+            "suggest": {
+                "symfony/console": "For helpful console commands such as SQL execution and import of files."
+            },
+            "bin": [
+                "bin/doctrine-dbal"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.9.x-dev",
+                    "dev-develop": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\DBAL\\": "lib/Doctrine/DBAL"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                }
+            ],
+            "description": "Powerful PHP database abstraction layer (DBAL) with many features for database schema introspection and management.",
+            "homepage": "https://www.doctrine-project.org/projects/dbal.html",
+            "keywords": [
+                "abstraction",
+                "database",
+                "dbal",
+                "mysql",
+                "persistence",
+                "pgsql",
+                "php",
+                "queryobject"
+            ],
+            "time": "2018-12-31T03:27:51+00:00"
+        },
+        {
+            "name": "doctrine/event-manager",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/event-manager.git",
+                "reference": "a520bc093a0170feeb6b14e9d83f3a14452e64b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/a520bc093a0170feeb6b14e9d83f3a14452e64b3",
+                "reference": "a520bc093a0170feeb6b14e9d83f3a14452e64b3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "conflict": {
+                "doctrine/common": "<2.9@dev"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^4.0",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\": "lib/Doctrine/Common"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "Doctrine Event Manager component",
+            "homepage": "https://www.doctrine-project.org/projects/event-manager.html",
+            "keywords": [
+                "event",
+                "eventdispatcher",
+                "eventmanager"
+            ],
+            "time": "2018-06-11T11:59:03+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -3502,6 +3733,342 @@
             "time": "2019-08-26T08:26:39+00:00"
         },
         {
+            "name": "tenancy/affects-connections",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tenancy/affects-connections.git",
+                "reference": "3e8a6a757ee608ec0c40f70b81c9265a35752bc1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tenancy/affects-connections/zipball/3e8a6a757ee608ec0c40f70b81c9265a35752bc1",
+                "reference": "3e8a6a757ee608ec0c40f70b81c9265a35752bc1",
+                "shasum": ""
+            },
+            "require": {
+                "tenancy/framework": "*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tenancy\\Affects\\Connections\\Provider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tenancy\\Affects\\Connections\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniël Klabbers",
+                    "email": "daniel@klabbers.email",
+                    "homepage": "http://luceos.com"
+                },
+                {
+                    "name": "Arlon Antonius",
+                    "email": "opensource@arlonantonius.com",
+                    "homepage": "https://arlonantonius.com"
+                }
+            ],
+            "description": "The tenancy/tenancy connections mutations",
+            "keywords": [
+                "affects",
+                "connections",
+                "tenancy"
+            ],
+            "time": "2019-09-06T08:46:38+00:00"
+        },
+        {
+            "name": "tenancy/db-driver-mysql",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tenancy/db-driver-mysql.git",
+                "reference": "eb37afe0956819ab14ad30c149fd1775172e3348"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tenancy/db-driver-mysql/zipball/eb37afe0956819ab14ad30c149fd1775172e3348",
+                "reference": "eb37afe0956819ab14ad30c149fd1775172e3348",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "^2.9",
+                "tenancy/affects-connections": "*",
+                "tenancy/framework": "*",
+                "tenancy/hooks-database": "*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tenancy\\Database\\Drivers\\Mysql\\Provider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tenancy\\Database\\Drivers\\Mysql\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniël Klabbers",
+                    "email": "daniel@klabbers.email",
+                    "homepage": "http://luceos.com"
+                },
+                {
+                    "name": "Arlon Antonius",
+                    "email": "opensource@arlonantonius.com",
+                    "homepage": "https://arlonantonius.com"
+                }
+            ],
+            "description": "The tenancy/tenancy database driver for mysql",
+            "keywords": [
+                "database",
+                "mariadb",
+                "mysql",
+                "tenancy"
+            ],
+            "time": "2019-09-06T07:43:07+00:00"
+        },
+        {
+            "name": "tenancy/framework",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tenancy/framework.git",
+                "reference": "1bbf0c8dfcc0ce80e9f4a41e5d1f9b18063218a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tenancy/framework/zipball/1bbf0c8dfcc0ce80e9f4a41e5d1f9b18063218a3",
+                "reference": "1bbf0c8dfcc0ce80e9f4a41e5d1f9b18063218a3",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "6.0.*",
+                "psr/container": "^1.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tenancy\\Providers\\TenancyProvider"
+                    ],
+                    "aliases": {
+                        "Tenancy": "Tenancy\\Facades\\Tenancy"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tenancy\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniël Klabbers",
+                    "email": "daniel@klabbers.email",
+                    "homepage": "http://luceos.com"
+                },
+                {
+                    "name": "Arlon Antonius",
+                    "email": "opensource@arlonantonius.com",
+                    "homepage": "https://arlonantonius.com"
+                }
+            ],
+            "description": "Creating multi tenant saas from your Laravel app with ease",
+            "keywords": [
+                "aws",
+                "gce",
+                "laravel",
+                "multi-tenant",
+                "saas",
+                "tenancy"
+            ],
+            "time": "2019-09-17T13:56:16+00:00"
+        },
+        {
+            "name": "tenancy/hooks-database",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tenancy/hooks-database.git",
+                "reference": "3e149fa35703866e4f1fa32334330f0209359a28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tenancy/hooks-database/zipball/3e149fa35703866e4f1fa32334330f0209359a28",
+                "reference": "3e149fa35703866e4f1fa32334330f0209359a28",
+                "shasum": ""
+            },
+            "require": {
+                "tenancy/framework": "*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tenancy\\Hooks\\Database\\Provider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tenancy\\Hooks\\Database\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniël Klabbers",
+                    "email": "daniel@klabbers.email",
+                    "homepage": "http://luceos.com"
+                },
+                {
+                    "name": "Arlon Antonius",
+                    "email": "opensource@arlonantonius.com",
+                    "homepage": "https://arlonantonius.com"
+                }
+            ],
+            "description": "The tenancy/tenancy database mutations",
+            "keywords": [
+                "database",
+                "hooks",
+                "tenancy"
+            ],
+            "time": "2019-09-06T08:46:38+00:00"
+        },
+        {
+            "name": "tenancy/hooks-migration",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tenancy/hooks-migration.git",
+                "reference": "59379bbecb5d2d99543b704922ffa0c8378b8d96"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tenancy/hooks-migration/zipball/59379bbecb5d2d99543b704922ffa0c8378b8d96",
+                "reference": "59379bbecb5d2d99543b704922ffa0c8378b8d96",
+                "shasum": ""
+            },
+            "require": {
+                "tenancy/affects-connections": "*",
+                "tenancy/framework": "*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tenancy\\Hooks\\Migration\\Provider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tenancy\\Hooks\\Migration\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniël Klabbers",
+                    "email": "daniel@klabbers.email",
+                    "homepage": "http://luceos.com"
+                },
+                {
+                    "name": "Arlon Antonius",
+                    "email": "opensource@arlonantonius.com",
+                    "homepage": "https://arlonantonius.com"
+                }
+            ],
+            "description": "The tenancy/tenancy migration mutations",
+            "keywords": [
+                "hooks",
+                "migration",
+                "tenancy"
+            ],
+            "time": "2019-09-06T07:43:07+00:00"
+        },
+        {
+            "name": "tenancy/identification-driver-http",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tenancy/identification-driver-http.git",
+                "reference": "d0ddc3880ebb76d71d9684c1d1539613ce3c84c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tenancy/identification-driver-http/zipball/d0ddc3880ebb76d71d9684c1d1539613ce3c84c6",
+                "reference": "d0ddc3880ebb76d71d9684c1d1539613ce3c84c6",
+                "shasum": ""
+            },
+            "require": {
+                "tenancy/framework": "*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tenancy\\Identification\\Drivers\\Http\\Providers\\IdentificationProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tenancy\\Identification\\Drivers\\Http\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniël Klabbers",
+                    "email": "daniel@klabbers.email",
+                    "homepage": "http://luceos.com"
+                },
+                {
+                    "name": "Arlon Antonius",
+                    "email": "opensource@arlonantonius.com",
+                    "homepage": "https://arlonantonius.com"
+                }
+            ],
+            "description": "The tenancy/tenancy identification driver for http",
+            "keywords": [
+                "http",
+                "identification",
+                "tenancy"
+            ],
+            "time": "2019-09-17T13:38:34+00:00"
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "2.2.1",
             "source": {
@@ -5713,7 +6280,13 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "tenancy/db-driver-mysql": 20,
+        "tenancy/framework": 20,
+        "tenancy/hooks-database": 20,
+        "tenancy/hooks-migration": 20,
+        "tenancy/identification-driver-http": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

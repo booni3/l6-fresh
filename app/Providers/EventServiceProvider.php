@@ -7,6 +7,10 @@ use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
 
+use Tenancy\Affects\Connections\Events as Connection;
+use Tenancy\Hooks\Database\Events\Drivers as Database;
+use Tenancy\Hooks\Migration\Events\ConfigureMigrations;
+
 class EventServiceProvider extends ServiceProvider
 {
     /**
@@ -18,6 +22,22 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+
+        /**
+         * Tenant database and connection configuration
+         */
+        Database\Configuring::class => [
+            \App\Listeners\ConfigureTenantDatabase::class
+        ],
+        Connection\Resolving::class => [
+            \App\Listeners\ResolveTenantConnection::class
+        ],
+        Connection\Drivers\Configuring::class => [
+            \App\Listeners\ConfigureTenantConnection::class
+        ],
+        ConfigureMigrations::class => [
+            \App\Listeners\ConfigureTenantMigration::class
+        ]
     ];
 
     /**
